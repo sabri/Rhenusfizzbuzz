@@ -30,6 +30,13 @@ public class FizzBuzzControllerTest {
                 .andExpect(status().isOk()).andExpect(content().string("number"));
         verify(service, times(1)).playinggame(42);
     }
+    @Test
+    void getNumbers() throws Exception{
+        when(service.playinggame(anyInt())).thenReturn("number!");
+        mockMvc.perform(get("/api/v1/fizzbuzz/numbers/42"))
+                .andExpect(status().isOk()).andExpect(content().string("number"));
+        verify(service, times(1)).playinggame(42);
+    }
 
 
 

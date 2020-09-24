@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 
+
 @RestController
 @RequestMapping(value = "/api/v1/fizzbuzz/")
 public class FizzBuzzController {
@@ -24,6 +25,7 @@ public class FizzBuzzController {
     public String getNumber(@PathVariable int input){
         return service.playinggame(input);
     }
+
     @RequestMapping(value = "/numbers/{input}", method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity<String> getNumbers(@PathVariable(name="input") int input) {
 

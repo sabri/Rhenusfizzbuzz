@@ -7,7 +7,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class FizzBuzzService {
-
+    /***
+     *
+     * @param input
+     * @return "Fizz","Buzz" or "FizzBuzz"
+     */
     public String playinggame(int input){
 
         if (isDivisibleBy(input,15)){
@@ -27,6 +31,12 @@ public class FizzBuzzService {
     private boolean isDivisibleBy(int input, int i) {
         return input % i == 0;
     }
+
+    /***
+     *
+     * @param input
+     * @return from 1 to input  {number,Fizz,Buzz or FizzBuzz}
+     */
     public String getNumbers_all(int input) {
 
 
