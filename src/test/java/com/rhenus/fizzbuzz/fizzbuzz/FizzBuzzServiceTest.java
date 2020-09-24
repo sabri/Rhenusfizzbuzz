@@ -43,4 +43,5 @@ class FizzBuzzServiceTest {
         assertThat(service.playinggame(input)).isEqualTo("FizzBuzz");
 
     }
+
 }

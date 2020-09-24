@@ -25,8 +25,8 @@ public class FizzBuzzController {
     public String getNumber(@PathVariable int input){
         return service.playinggame(input);
     }
-    @RequestMapping(value = "/cumulative/{input}", method = RequestMethod.GET)
-    public ResponseEntity<String> getCumulativeAnswer(@PathVariable(name="input", required=true) int input) {
+    @RequestMapping(value = "/numbers/{input}", method = RequestMethod.GET, produces = "application/json")
+    public ResponseEntity<String> getNumbersAnswer(@PathVariable(name="input", required=true) int input) {
 
         String response = this.service.getNumbers_all(input);
 

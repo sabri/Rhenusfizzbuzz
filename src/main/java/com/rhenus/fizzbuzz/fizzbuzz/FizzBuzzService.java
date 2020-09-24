@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class FizzBuzzService {
-private Number number;
+
     public String playinggame(int input){
 
         if (isDivisibleBy(input,15)){
