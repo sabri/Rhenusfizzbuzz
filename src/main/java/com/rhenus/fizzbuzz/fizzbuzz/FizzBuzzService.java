@@ -2,9 +2,7 @@ package com.rhenus.fizzbuzz.fizzbuzz;
 
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+
 
 
 @Service
@@ -39,7 +37,7 @@ public class FizzBuzzService {
             sb.append(this.playinggame(i));
         }
 
-        return sb.toString().substring(2);
+        return sb.substring(2);
     }
 
 }

@@ -6,8 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 @RestController
 @RequestMapping(value = "/api/v1/fizzbuzz/")
@@ -26,10 +25,11 @@ public class FizzBuzzController {
         return service.playinggame(input);
     }
     @RequestMapping(value = "/numbers/{input}", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<String> getNumbersAnswer(@PathVariable(name="input", required=true) int input) {
+    public ResponseEntity<String> getNumbers(@PathVariable(name="input") int input) {
 
         String response = this.service.getNumbers_all(input);
 
-        return new ResponseEntity<String>(response, HttpStatus.OK);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
+
 }
