@@ -2,7 +2,8 @@ package com.rhenus.fizzbuzz.fizzbuzz;
 
 import org.springframework.stereotype.Service;
 
-
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Service
@@ -29,17 +30,17 @@ public class FizzBuzzService {
     }
 
 
-    public String getNumbers_all(int input) {
+    public List<String> getNumbers_all(int input) {
 
 
-        StringBuilder sb = new StringBuilder(1000);
+        List<String> sb = new ArrayList<>();
 
         for (int i = 1; i <= input; i++) {
-            sb.append(", ");
-            sb.append(this.playinggame(i));
+
+            sb.add(this.playinggame(i));
         }
 
-        return sb.substring(2);
+        return sb;
     }
 
 }
