@@ -24,3 +24,4 @@ git add
 git commit -m ""
 git push
 ```
+## Kindly check my Commit history from this link (https://github.com/sabri/Rhenusfizzbuzz/commits/master)
